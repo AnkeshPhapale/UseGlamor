@@ -8,12 +8,13 @@ import React from 'react';
 class Header extends React.Component{
 
     state ={
-        title:"you are typing.........",
+        title:"",
         key:""
     }
     inputChangeHandler=(event)=>{
         this.setState({
-         key:event.target.value 
+         key:event.target.value ,
+         title:"you are typing..."
         })
        
         
@@ -21,6 +22,7 @@ class Header extends React.Component{
 
 
 render (){
+     
     const style ={
      background:"red"
     }
