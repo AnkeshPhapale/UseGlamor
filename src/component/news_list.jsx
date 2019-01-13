@@ -10,21 +10,26 @@ const NewsList = (props) => {
     let styleTwo = css({
      background:"cyan"
     })
+   
     console.log(props)
+
     const items = props.news.map((item)=> {
+       
        return(
-           <div {...stylefNews} {...styleTwo}>
+       
+           <div {...stylefNews} {...styleTwo}  key={item.id}>
                <h3>{item.title}</h3>
                <div>{item.feed}</div>
            </div>
        )
     }
     
-    );
+     );
     return(
         <div>
+        
             {props.children}
-       {items}
+        {items}
         </div>
     )
 }

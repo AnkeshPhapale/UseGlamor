@@ -22,7 +22,7 @@ class Header extends React.Component{
 
 
 render (){
-     
+    //  console.log(this.props.keywords)
     const style ={
      background:"red"
     }
@@ -33,12 +33,12 @@ render (){
     else{
         style.background="red"
     }
-    console.log(this.state.key);
+   // console.log(this.state.key);
     return (  
 <header style={style}>
   <div className="logo" 
   onClick= { () =>{ console.log("i was clicked");}}>Dyanamic text</div>
-  <input type="text" onChange= {this.inputChangeHandler}></input>
+  <input type="text" onChange= {this.props.keywords}></input>
   <div>{this.state.title}</div>
   <div>{this.state.key}</div>
 </header>
